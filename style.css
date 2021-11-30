@@ -1,0 +1,93 @@
+body {
+  background-color: #6dacc7;
+}
+
+h1 {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 32px;
+  color: #45462A;
+}
+
+h4 {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 20px;
+  color: #45462A;
+  padding-top: 32px;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  color: #343330;
+  padding-bottom: 32px;
+}
+
+a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff
+}
+
+a:hover {
+  color: #4e007c;
+}
+
+i {
+  color: #ffffff;
+  font-size: 32px
+}
+
+i:hover {
+  color: #4e007c;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+    /*margin: auto 20px*/
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+    /*margin: auto 20px*/
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+    /*margin: auto 20px*/
+  }
+}
+
+div {
+  text-align: center;
+  background: #aecbd8;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px #004a7c;
+  margin: 8px auto;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#profile {
+  max-height: 250px;
+  width: auto;
+  border-radius: 25%;
+  object-fit: cover;
+}
+
+li {
+  display: inline;
+  padding-bottom: 32px;
+}
+
+.list-inline {
+  list-style: none;
+  padding: 0px;
+  color: #ffffff
+}
