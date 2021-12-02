@@ -1,93 +1,456 @@
-body {
-  background-color: #6dacc7;
+*{padding: 0; margin: 0; box-sizing: border-box;}
+/* body{height: 900px;} */
+header {
+	background: url("https://c.tenor.com/yasksYy1XekAAAAC/matrix-code.gif");
+	text-align: center;
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+    margin-bottom: 100px;
+}
+
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+    /* background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%); */
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #171717;
+    margin-top: 50px;
+}
+
+footer div p{
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 h1 {
-  font-family: 'Oxygen', sans-serif;
-  font-size: 32px;
-  color: #45462A;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 80px;
+    font-weight: 900;
+	  margin-bottom: 30px;
+    padding-top: 3%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+h3 {
+    padding-top: 50px;
+}
+
+h3, p {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 30px;
 }
 
 h4 {
-  font-family: 'Oxygen', sans-serif;
-  font-size: 20px;
-  color: #45462A;
-  padding-top: 32px;
+  text-decoration: underline;
 }
 
-p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  color: #343330;
-  padding-bottom: 32px;
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+button:hover{
+	cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+button a:hover {
+  color: white;
+}
+
+.image-cropper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 10px white;
+}
+
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  /* margin-top: -10%; */
+  margin-left: -25%;
+  height: 100%;
+  width: auto;
+}
+
+.banner{
+  background-color: #cec8c9b9;
+  border-radius: 100px 100px 0 0;
+  width: 800px;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 25%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Sacramento");
+
+html {
+  font-size: 14.5px;
+}
+
+body {
+  line-height: 1.45em;
+  background-color: #221d1d;
+  /* background-image: linear-gradient(to right,#2c3e50, #fd746c); */
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.imggif {
+  width: 100px;
+  display: inline;
+}
+
+.imageadj {
+  display: inline;
+}
+
+.main-container {
+  margin: 1.6rem 0.8rem;
+}
+
+.grid-container {
+  margin: auto;
+  display: grid;
+  grid-gap: 1.1312rem;
+  grid-template-columns: repeat(auto-fit, 12.8rem);
+  grid-auto-rows: 12.8rem;
+  grid-auto-flow: dense;
+  justify-content: center;
+  max-width: 75em;
 }
 
 a {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
   text-decoration: none;
-  color: #ffffff
-}
-
-a:hover {
-  color: #4e007c;
-}
-
-i {
   color: #ffffff;
-  font-size: 32px
 }
 
-i:hover {
-  color: #4e007c;
+.card {
+  grid-row: auto/span 1;
+  grid-column: auto/span 1;
+  /* background-color: #780206; */
+  background: linear-gradient(121deg, #000000 15%, #0f9b0f 100%);
+  box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+  border-radius: 20px;
+}
+
+.card h1, .card h2, .card h3, .card h4, .card p {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.card__image {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.card__image img {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+     border-radius: 20px 0 0 20px;
+}
+
+.card__side-by-side {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.card__side-by-side--m {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card__side-by-side--m img {
+  min-height: auto;
+}
+
+.card__content {
+  padding: 1.6rem;
+}
+
+.card__button {
+  margin: 1.6rem 0;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  background: none;
+  border: 0.5px solid #777;
+  border-radius: 2px;
+}
+
+.card__button:hover {
+  border-color: #d099a0;
+}
+
+.card--featured {
+  grid-row: auto/span 3;
+  grid-column: auto/span 2;
+}
+
+.card--2x {
+  grid-row: auto/span 2;
+  grid-column: auto/span 2;
+}
+
+.card--vertical {
+  grid-row: auto/span 2;
+}
+
+.card--horizontal {
+  grid-column: auto/span 2;
+}
+
+.card--frameless {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.padding-large {
+  padding: 3.2rem;
+}
+
+.padding-large--l {
+  padding: 1.6rem;
+}
+
+.big-script {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.3em;
+  line-height: 1.15em;
+  text-align: center;
+}
+
+.big-script p {
+  margin: 0;
+  font-size: 0.5em;
+}
+
+@media (min-width: 413px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .card {
+    min-height: 12.8rem;
+  }
+
+}
+@media (min-width: 627px) {
+  .grid-container {
+    grid-gap: 1.6rem;
+  }
+
+    .card__side-by-side--m {
+    flex-flow: row nowrap;
+  }
+  .card__side-by-side--m img {
+    min-height: 100%;
+  }
+  .card--featured {
+    grid-row: auto/span 2;
+    grid-column: 1/-1;
+  }
+}
+
+@media (min-width: 836px) {
+  .padding-large--l {
+    padding: 3.2rem;
+  }
+
+}
+
+.container {
+  width: 1000px;
+  /*margin: auto 20px*/
 }
 
 @media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
+/* For a screen < 960px, this CSS will be read */
   .container {
-    width: 700px;
-    /*margin: auto 20px*/
+  width: 700px;
+  /*margin: auto 20px*/
   }
 }
+
 @media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
+/* For a screen < 720px, this CSS will be read */
   .container {
-    width: 500px;
-    /*margin: auto 20px*/
+  width: 500px;
+  /*margin: auto 20px*/
   }
 }
+
 @media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
+/* For a screen < 540px, this CSS will be read */
   .container {
-    width: 300px;
-    /*margin: auto 20px*/
+  width: 300px;
+  /*margin: auto 20px*/
   }
 }
 
-div {
-  text-align: center;
-  background: #aecbd8;
-  border-radius: 4px;
-  box-shadow: 2px 2px 3px #004a7c;
-  margin: 8px auto;
-  padding-left: 20%;
-  padding-right: 20%;
-}
+.infocardContainer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  }
 
-#profile {
-  max-height: 250px;
-  width: auto;
-  border-radius: 25%;
-  object-fit: cover;
-}
+ h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 
-li {
-  display: inline;
-  padding-bottom: 32px;
-}
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: #555566;
+  }
 
-.list-inline {
-  list-style: none;
-  padding: 0px;
-  color: #ffffff
-}
+  .infocardContainer {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    background: rgb(0,159,255);
+    background: linear-gradient(121deg, #52c234 13%, #061700 100%);
+    transition: all 500ms ease-in;
+    transition-delay: 1s;
+    margin: auto;
+    margin-top: 100px;
+    --margin-top: 100px;
+    padding-top: 10px;
+    margin-bottom: 80px;
+  }
+
+  .infocardContainer:hover {
+    width: 700px;
+    border-radius: 100px 10px 100px 100px;
+    transition: all 1s ease-out;
+  }
+
+  .infocardContainer div {
+    color: white;
+    flex-shrink: 1;
+    width: 100%;
+    --background-color: green;
+  }
+
+  .infocardContainer div * {
+    display: flex;
+    --flex: inherit;
+    overflow: hidden;
+    text-overflow: hidden;
+    --background-color: yellow;
+    color: white;
+    white-space: nowrap;
+    width: 0;
+    height: auto;
+    transition: all 450ms ease-in;
+    transition-delay: 1s;
+  }
+
+  .infocardContainer:hover div *{
+    --background-color: purple;
+    display: flex;
+    visibility: visible;
+    transition: all 1s ease-out;
+    transition-delay: 500ms;
+    width: 100%;
+    height: auto;
+  }
+
+  .infocardContainer #main, .infocardContainer #main img{
+    --background-color: red;
+    height: 300px;
+    width: 300px;
+    padding-right: 10px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .infocardContainer #main img{
+    height: 300px;
+    width: 300px;
+    transition: none;
+    display: float;
+    position: relative;
+    border: 10px solid white;
+    margin: 0 0 0 0; padding: 0 0 0 0;
+  }
+
+  .infocardContainer #textbois {
+    position: relative;
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+
+  .infocardContainer #textbois #hotlinks {
+    max-width: 60%;
+    max-height: 60px;
+    --background-color: rgb(255, 255, 255);
+    position:absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    /* border-radius: 13px; */
+  }
+
+  .infocardContainer #textbois #hotlinks img {
+    background-color: rgb(0, 0, 0);
+    max-width: 50px;
+    --margin: 0 ;
+    /* border-radius: 25px; */
+  }
+
+  i {
+    color: #000000;
+    font-size: 50px;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
